@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "uuid": "^11.0.5" /*在終端機輸入npm install uuid --save，成功的話會出現這行文字*/
+    "uuid": "^11.0.5" 
+  },
+  "engines":{ 
+    "node":"22.x"
   }
 }

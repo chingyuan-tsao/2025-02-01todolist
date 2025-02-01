@@ -151,6 +151,6 @@ const requestListener = (req, res)=>{
 
 //server.listen(3005) 啟動伺服器，並監聽本地電腦的 3005 埠 (Port)。這樣客戶端可以透過 http://localhost:3005 存取伺服器。 
 const server = http.createServer(requestListener);
-server.listen(3005);
+server.listen(process.env.PORT || 3005); //render雲端主機服務專用寫法
 
 /* 步驟三：終端機輸入node app.js，網址輸入127.0.0.1:3005或是localhost:3005，網頁會出現hello123465 */
