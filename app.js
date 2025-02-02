@@ -139,6 +139,9 @@ const requestListener = (req, res)=>{
                 errHandle(res, headers);
             }
         })
+    }else if(req.method=='OPTIONS'){ //建立 option API 設置 cors 表頭資訊
+        res.writeHead(200,headers);
+        res.end();
     }else{
         res.writeHead(404,headers); //建立 404：無對應路由
         res.write(JSON.stringify({
